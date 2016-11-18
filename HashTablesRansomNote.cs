@@ -18,7 +18,6 @@ namespace HackerRank{
 
         static string CheckWords(int m, int n, string[] mag, string[] ransom)
         {
-            int wordsNeeded = n;
             Dictionary<string, int> wordsAvailable = new Dictionary<string, int>();
             foreach(string x in mag)
             {
@@ -40,11 +39,9 @@ namespace HackerRank{
             foreach(int i in wordsAvailable.Values.ToList())
             {
                 if (i < 0)
-                    wordsNeeded--;
+                    return "No";
             }
-            if (wordsNeeded == n)
                 return "Yes";
-            else return "No";
         }
     }
 }
