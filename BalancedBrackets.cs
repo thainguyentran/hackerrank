@@ -15,7 +15,6 @@ namespace HackerRank
                 string expression = Console.ReadLine();
                 Console.WriteLine(f.CheckBrackets(expression));
             }
-            Console.Read();
         }
     }
     class Functions
